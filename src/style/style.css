@@ -16,6 +16,7 @@ html {
     --bg-color-pesquisa: #1F1F1F;
     --bg-color-carrinho-item: #2B2B2B;
     --color-ul: #aaa;
+    --color-lupa: #ccc;
 }
 
 header {
@@ -105,6 +106,54 @@ header {
     width: 300px;
 }
 
+.pesquisa {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0px;
+    background-color: var(--bg-color-pesquisa);
+    color: var(--color-fonts);
+}
+
+.n1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.lupa a {
+    background-color: var(--bg-color-carrinho-item);
+    color: var(--color-lupa);
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 6px;
+}
+
+.lupa i {
+    margin-right: 10px;
+}
+
+.n2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.n2 select {
+    background-color: var(--bg-color-carrinho-item);
+    color: var(--color-lupa);
+    text-decoration: none;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    padding: 20px 30px;
+}
+
 
 /* Responsividade */
 @media (width > 599px) {
@@ -118,6 +167,10 @@ header {
     .menu,
     .botao {
         display: none;
+    }
+
+    .pesquisa {
+        flex-direction: column;
     }
 }
 
