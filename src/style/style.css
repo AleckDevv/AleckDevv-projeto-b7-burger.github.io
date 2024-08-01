@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --bg-color-pagina: #141414;
+    --bg-color-botao: #FE6A0F;
+    --color-fonts: #FFFFFF;
+    --bg-color-pesquisa: #1F1F1F;
+    --bg-color-carrinho-item: #2B2B2B;
+    --color-ul: #aaa;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    padding: 30px 0px;
+    font-size: 1.5rem;
+    color: var(--color-fonts);
+    background-color: var(--bg-color-pagina);
+}
+
+.log {
+    font-size: 1.8rem;
+}
+
+.menu ul {
+    display: flex;
+    gap: 40px;
+    font-size: 1.8rem;
+    list-style: none;
+    color: var(--color-ul);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-fonts);
+}
+
+.botao a {
+    color: var(--color-fonts);
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid var(--color-fonts);
+    border-radius: 6px;
+}
+
+.menu_span span {
+    display: grid;
+    margin: 5px;
+    width: 25px;
+    height: 2.2px;
+    background-color: var(--color-fonts);
+}
+
+
+
+.propaganda {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: var(--bg-color-pagina);
+    color: var(--color-fonts)
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.titulo h1 {
+    font-size: 4rem;
+}
+
+.descricao p {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--color-ul);
+}
+
+.bt a {
+    color: var(--color-fonts);
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid var(--color-fonts);
+    border-radius: 6px;
+    font-size: 1.6rem;
+    background-color: var(--bg-color-botao);
+    border: none;
+    padding: 10px 50px;
+}
+
+.imagem_burger img {
+    width: 300px;
+}
+
+
+/* Responsividade */
+@media (width > 599px) {
+    .menu_span {
+        display: none;
+    }
+}
+
+@media (width < 600px) {
+
+    .menu,
+    .botao {
+        display: none;
+    }
+}
+
+@media (width < 767px) {
+    .propaganda {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+}
