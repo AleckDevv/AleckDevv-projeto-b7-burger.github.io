@@ -155,12 +155,93 @@ header {
 }
 
 
+/* Area dos produtos */
+main {
+    background-color: var(--bg-color-pagina);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produtos_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: 40px 0px;
+}
+
+.produtos_item {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+}
+
+.produtos_item:hover {
+    opacity: 0.8;
+}
+
+.produtos_item .aviso {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: var(--bg-color-botao);
+    color: var(--color-fonts);
+    font-size: 1.6rem;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.produtos_item .foto {
+    text-align: center;
+    background-color: var(--bg-color-carrinho-item);
+    padding: 0px 40px;
+    padding-top: 30px;
+}
+
+.produtos_item .foto img {
+    max-width: 100%;
+}
+
+.produtos_item .informacoes {
+    background-color: var(--bg-color-pesquisa);
+    padding: 60px 30px 30px 30px;
+    margin-top: -50px;
+}
+
+.produtos_item .produto_categoria {
+    color: var(--color-fonts);
+    font-size: 1.8rem;
+}
+
+.produtos_item .produto_nome {
+    font-family: 'Calistoga';
+    font-size: 3.2rem;
+    color: var(--color-fonts);
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.produtos_grid .produto_preco {
+    color: var(--bg-color-botao);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
 /* Responsividade */
+
+
 @media (width > 599px) {
     .menu_span {
         display: none;
     }
 }
+
 
 @media (width < 600px) {
 
@@ -179,5 +260,23 @@ header {
         flex-direction: column;
         text-align: center;
         gap: 60px;
+    }
+}
+
+@media (width < 1024px) {
+    .produtos_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 770px) {
+    .produtos_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 689px) {
+    .produtos_grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
