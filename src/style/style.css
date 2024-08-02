@@ -233,6 +233,25 @@ main {
     font-size: 1.9rem;
 }
 
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color-carrinho-item);
+    color: var(--color-fonts);
+    height: 60px;
+}
+
+footer .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer .feito_por {
+    font-size: 1.4rem;
+    color: var(--color-ul);
+}
+
 /* Responsividade */
 
 
@@ -278,5 +297,11 @@ main {
 @media (max-width: 689px) {
     .produtos_grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    footer {
+        flex-direction: column;
     }
 }
